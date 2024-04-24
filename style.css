@@ -105,12 +105,20 @@ main{
     justify-content: flex-end;
 }
 .button_close{
-    width: 90%; background: none; font-size: 30px; text-align: start;
+    width: 90%;
+    background: none;
+    font-size: 30px;
+    text-align: start;
     height: 30px;
 }
 .button_open{
-    width: 5%; background: none; font-size: 30px;
-    height: 30px; position:absolute; top:24%; left: 85%;
+    width: 5%;
+    background: none;
+    font-size: 30px;
+    height: 30px;
+    position:absolute;
+    top:24%;
+    left: 85%;
     opacity: 0;
 }
 article{
