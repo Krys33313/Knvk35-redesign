@@ -2,7 +2,7 @@
 *{
     padding: 0;
     margin: 0;
-    border: none;
+    border: 0;
     box-sizing: border-box;
     font-family: 'PT Sans Narrow', sans-serif;
     font-weight: 500;
@@ -40,15 +40,14 @@ header{
     display: flex;
     background: #f0bf2b;
     align-items: center;
-    padding-left: 3%;
-    gap: 7rem;
+    padding-left: 5%;
+    gap: 9em;
     width: 100%;
     height: 110px;
 }
 .log_img{
-    width: 9%;
-    height: 100%;
-
+    width: 8.5%;
+    height: 95%;
 }
 nav{
     width: 100%;
@@ -102,26 +101,30 @@ main{
     background: rgb(248, 246, 246);
     margin-bottom: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
 }
+.button_close{
+    width: 90%; background: none; font-size: 30px; text-align: start;
+    height: 30px;
+}
+.button_open{
+    width: 5%; background: none; font-size: 30px;
+    height: 30px; position:absolute; top:24%; left: 85%;
+    opacity: 0;
+}
 article{
-    width: 83%;
+    width: 75%;
     height: 100%;
     display: flex;
-    padding: 2%;  
     overflow: scroll; 
-    padding: 5%;
     justify-content: center;
+    padding: 5%;
     flex-wrap: wrap;
     align-content: space-around;
-    scrollbar-color: #f0bf2b, white;
     scrollbar-width: thin;
 }
-/* article *{
-    border: 1px solid;
-} */
 .knvk{
-    width: 300px;
     height: 200px;
     position: relative;
     left: -20px;
@@ -133,14 +136,21 @@ article p{
 article h3{
     margin-top: 3%;
     margin-bottom: 3%;
-    font-size: 27px;
+    font-size: 26px;
+}
+.article_h2{
+    width: 60%;
+    font-size: 35px;
+    height: 150px; display: flex;
+    align-items: center;
+    justify-content: center;
 }
 aside{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
-    width: 29%;
+    width: 25%;
     height: 100%;
     background: #ef3b2b;
 }
@@ -171,7 +181,7 @@ fieldset{
     font-weight: 400;
     border-radius: 5px;
 }
-legend{
+.side_p{
     width: 100%;
     text-align: center;
     font-size: 23px;
@@ -254,6 +264,7 @@ input:focus{
     width: 90%;
     height: 15%;
     margin-top: 10%;
+    overflow: hidden;
 }
 footer{
     background: #ef3b2b;
@@ -263,7 +274,7 @@ footer{
     align-items: center;
     justify-content: space-around;
 }
-@media screen and (max-width: 600px) and (max-height: 1024px){
+@media screen and (max-width: 600px){
     .box > *{
         width: 100%;
     }
@@ -299,14 +310,49 @@ footer{
         width: 30%;
         height: 20%;
     }
+    main{
+        height: 1300px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        margin: 0;
+    }
+    .button_open{
+        display: none;
+    }
+    article{
+        width: 100%;
+        height: 70%;
+    }
+    .knvk{
+        top: 0;
+        left: 4%;
+        height: 300px;
+    }
+    .button_close{
+        display: none;
+    }
     aside{
-        width: 60%;
+        height: 30%;
+        width: 100%;
+        padding: 0;
+    }
+    form{
+        height: 100%;
     }
     fieldset{
         width: 100%;
     }
     .checkbox_login{
         text-align: center;
+        flex-direction: column;
+        height: 50px;
+    }
+    .diary{
+        display: none;
+    }
+    .monu{
+        display: none;
     }
     .monu{
         width: 100%;
@@ -329,5 +375,168 @@ footer{
     }
     .password{
         height: 15%;
+    }
+    .submit{
+        justify-content: center;
+    }
+}
+
+
+@media screen and (min-width: 700px) and (max-width:900px){
+    .box > *{
+        width: 100%;
+    }
+    header{
+        height: 300px;
+        margin-bottom: 5px;
+    }
+    nav{
+        height: 190px;
+        flex-wrap: wrap;
+    }
+    .log_img{
+        width: 15%;
+    }
+    .logo{
+        padding-left: 1%;
+        gap: 0;
+    }
+    .logo_name{
+        width: 100%;
+        font-size: 23px;
+        text-align: center;
+    }
+    nav a{
+        font-size: 28px;
+        width: 20%;
+        height: 50%;
+    }
+    nav a:focus{
+        background-color: #ef9228;
+    }
+    .lang{
+        width: 22%;
+        height: 21%;
+    }
+    main{
+        height: 1300px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        margin: 0;
+    }
+    .button_open{
+        display: none;
+    }
+    article{
+        width: 100%;
+        height: 70%;
+    }
+    article p{
+        font-size: 25px;
+    }
+    .knvk{
+        display: block;
+        top: 0;
+        left: 4%;
+        height: 200px;
+    }
+    article .knvk{
+        width: 300px;
+    }
+    .button_close{
+        display: none;
+    }
+    aside{
+        height: 30%;
+        width: 100%;
+        padding: 0;
+    }
+    form{
+        height: 100%;
+    }
+    fieldset{
+        width: 100%;
+    }
+    .checkbox_login{
+        text-align: center;
+        flex-direction: column;
+        height: 50px;
+    }
+    .diary{
+        display: none;
+    }
+    .monu{
+        display: none;
+    }
+    .monu{
+        width: 100%;
+    }
+    .diary *{
+        width: 100%;
+    }
+    footer h2{
+        display: flex;
+        justify-content: center;
+    }
+    .knvk{
+        width: 100%;
+    }
+    .diary{
+        margin-top: 40%;
+    }
+    .username{
+        height: 18%;
+        width: 75%;
+    }
+    .password{
+        height: 18%;
+        width: 75%;
+    }
+    .submit{
+        justify-content: center;
+        width: 75%;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width:1450px){
+    .box>*{
+        width: 90%;
+    }
+    .knvk{
+        height: 140px;
+    }
+    .log_img{
+        width: 13%;
+    }
+    .logo{
+       gap: 2em; 
+    }
+    header{
+        height: 270px;
+    }
+    nav{
+        flex-wrap: wrap;
+        height: 150px;
+        align-items: start;
+    }
+    nav a{
+        height: 60%;
+    }
+    .lang{
+        width: 15%;
+        height: 35px;
+    }
+    .button_open{
+        top: 35%;
+    }
+    .password{
+        height: 15%;
+    }
+    .username{
+        height: 15%;
+    }
+    .checkbox_login{
+        flex-direction: column;
+        height: 50px;
     }
 }
